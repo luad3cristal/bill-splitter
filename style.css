@@ -2,4 +2,184 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+
+	font-family: "Space Mono", sans-serif;
+	font-weight: 700;
 }
+
+:root {
+	--strong-cyan: hsl(172, 67%, 45%);
+	--very-dark-cyan: hsl(183, 100%, 15%);
+	--dark-grayish-cyan: hsl(186, 14%, 43%);
+	--grayish-cyan: hsl(184, 14%, 56%);
+	--light-grayish-cyan: hsl(185, 41%, 84%);
+	--very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--white: hsl(0, 0%, 100%);
+}
+
+/* Tirando as setas de acrescimento e decrescimento dos inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+
+	/* padding: 50px 20px; */
+	padding: 3rem;
+
+	background-color: var(--light-grayish-cyan);
+}
+
+h1 {
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	word-break: break-all;
+	width: 5em;
+
+	color: var(--dark-grayish-cyan);
+}
+
+main {
+	width: 60vw;
+	background-color: var(--white);
+	display: flex;
+	gap: 3rem;
+
+	border-radius: 1.8rem;
+	padding: 2rem;
+
+	color: var(--dark-grayish-cyan);
+}
+
+.input-area {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+
+	gap: 1.8rem;
+	padding: 0.5rem;
+}
+
+.input-area > div {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	gap: 0.6rem;
+}
+
+.input-area input {
+	background-color: var(--very-light-grayish-cyan);
+	border: none;
+
+	border-radius: 5px;
+	padding: 0.4rem 0.7rem;
+
+	text-align: right;
+	font-size: 1.5em;
+	color: var(--very-dark-cyan);
+}
+
+.input-area #bill {
+	background-image: url("./assets/icon-dollar.svg");
+	background-repeat: no-repeat;
+	background-position: 0.8rem center;
+}
+
+.input-area #people {
+	background-image: url("./assets/icon-person.svg");
+	background-repeat: no-repeat;
+	background-position: 0.8rem center;
+}
+
+label {
+	display: flex;
+	justify-content: space-between;
+}
+
+span {
+	display: none;
+	color: rgba(255, 0, 0, 0.8);
+}
+
+.input-area input::placeholder {
+	color: var(--grayish-cyan);
+}
+
+.input-area div .botaos {
+	display: grid;
+	grid-template-columns: 31% 31% 31%;
+	grid-template-rows: 3rem 3rem;
+	gap: 1rem;
+}
+
+.input-area div .botaos button {
+	font-size: 1.5rem;
+	color: var(--very-light-grayish-cyan);
+
+	background-color: var(--very-dark-cyan);
+	border: none;
+	border-radius: 0.3rem;
+}
+
+.input-area div .botaos input {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+input:focus {
+	outline: 2px var(--strong-cyan) solid;
+}
+
+.output-area {
+	background-color: var(--very-dark-cyan);
+	width: 60%;
+
+	border-radius: 20px;
+	padding: 2rem 1.8rem;
+
+	display: grid;
+	grid-template-rows: 2fr 4fr;
+}
+
+.output-area > div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.output-area h3 {
+	color: var(--light-grayish-cyan);
+	font-size: 1.3rem;
+}
+
+.output-area p {
+	color: var(--grayish-cyan);
+}
+
+.output-area h2 {
+	color: var(--strong-cyan);
+	font-size: 2rem;
+}
+
+.output-area button {
+	background-color: var(--strong-cyan);
+	border: none;
+	color: var(--very-dark-cyan);
+
+	padding: 0.5rem 1rem;
+	font-size: 1.3rem;
+
+	text-transform: uppercase;
+}
+
+button {
+	cursor: pointer;
+}
+

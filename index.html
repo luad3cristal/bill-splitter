@@ -21,6 +21,64 @@
 		<title>Splitter</title>
 	</head>
 	<body>
+		<h1>Splitter</h1>
+
+		<main>
+			<section class="input-area">
+				<div>
+					<label for="bill">Bill</label>
+					<input type="number" name="valor:" id="bill" placeholder="0" />
+				</div>
+
+				<div>
+					<label for="percentage">Select Tip %</label>
+					<div class="botaos">
+						<button>5%</button>
+						<button>10%</button>
+						<button>15%</button>
+						<button>25%</button>
+						<button>50%</button>
+						<input
+							type="number"
+							name="porcentagem"
+							id="percentage"
+							placeholder="Custom"
+						/>
+					</div>
+				</div>
+
+				<div>
+					<label for="people"
+						>Number of People <span>Qtd. Inválida</span></label
+					>
+					<input
+						type="number"
+						name="pessoas"
+						id="people"
+						placeholder="0"
+						value="1"
+					/>
+				</div>
+			</section>
+			<section class="output-area">
+				<div>
+					<div class="amount">
+						<h3>Tip Amount</h3>
+						<p>/ person</p>
+					</div>
+					<h2>$ 0.00</h2>
+				</div>
+				<div>
+					<div class="total">
+						<h3>Total</h3>
+						<p>/ person</p>
+					</div>
+					<h2>$ 0.00</h2>
+				</div>
+				<button>Reset</button>
+			</section>
+		</main>
+
 		<script src="script.js"></script>
 	</body>
 </html>
