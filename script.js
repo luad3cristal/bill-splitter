@@ -1,11 +1,9 @@
-// 1. Reset - Reseta o valor da conta ✔
-// 2. Number of People - Não pode ser <= 0 ✔
-// 3. Coletar o botão selecionado ✔
-// 4. Mudar a cor do botão selecionado ✔
-// 5. Adicionar borda ao input custom se ele tiver sido selecionado ✔
-// 6. Calcular a porcentagem de gorjeta:
-// Tip: bill / 100 * porcentagem
-// Total: Bill + Tip
+// Aparecer o total mesmo sem a porcentagem ser inserida
+// Organizar o código (variáveis, funções, etc)
+// Melhorar as funções
+// Diminuir a repetição de código
+// Alterar algumas regras de estilização
+
 
 // Mostra a mensagem de erro caso qtdPessoas <= 0
 const qtdPessoas = document.querySelector("#people");
