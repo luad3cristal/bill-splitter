@@ -124,26 +124,27 @@ main {
     background-repeat: no-repeat;
     background-position: 0.8rem center;
   }
+  
+  label {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  span {
+    display: none;
+    color: rgba(255, 0, 0, 0.8);
+  }
+  
+  input::placeholder {
+    color: var(--grayish-cyan);
+  }
+  
+  input.selecionado,
+  input:focus {
+    outline: 2px var(--strong-cyan) solid;
+  }
 }
 
-label {
-  display: flex;
-  justify-content: space-between;
-}
-
-span {
-  display: none;
-  color: rgba(255, 0, 0, 0.8);
-}
-
-input::placeholder {
-  color: var(--grayish-cyan);
-}
-
-input.selecionado,
-input:focus {
-  outline: 2px var(--strong-cyan) solid;
-}
 
 .output-area {
   background-color: var(--very-dark-cyan);
