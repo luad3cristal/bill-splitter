@@ -86,6 +86,7 @@ main {
 
         background-color: var(--very-dark-cyan);
         border: none;
+        outline: none;
         border-radius: 0.3rem;
       }
 
@@ -153,7 +154,7 @@ input:focus {
 
   display: grid;
   grid-template-rows: 2fr 4fr;
-  
+
   > div {
     display: flex;
     justify-content: space-between;
@@ -176,6 +177,8 @@ input:focus {
   button {
     background-color: var(--dark-grayish-cyan);
     border: none;
+    outline: none;
+
     border-radius: 0.2rem;
     color: var(--very-dark-cyan);
 

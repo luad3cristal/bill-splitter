@@ -76,6 +76,7 @@ main {
   color: var(--very-light-grayish-cyan);
   background-color: var(--very-dark-cyan);
   border: none;
+  outline: none;
   border-radius: 0.3rem;
 }
 .input-area div .botaos input {
@@ -154,6 +155,7 @@ input:focus {
 .output-area button {
   background-color: var(--dark-grayish-cyan);
   border: none;
+  outline: none;
   border-radius: 0.2rem;
   color: var(--very-dark-cyan);
   padding: 0.5rem 1rem;
