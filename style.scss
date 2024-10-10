@@ -134,17 +134,17 @@ main {
     display: none;
     color: rgba(255, 0, 0, 0.8);
   }
-  
-  input::placeholder {
-    color: var(--grayish-cyan);
-  }
-  
-  input.selecionado,
-  input:focus {
-    outline: 2px var(--strong-cyan) solid;
-  }
 }
 
+
+input::placeholder {
+  color: var(--grayish-cyan);
+}
+
+input.selecionado,
+input:focus {
+  outline: 2px var(--strong-cyan) solid;
+}
 
 .output-area {
   background-color: var(--very-dark-cyan);
