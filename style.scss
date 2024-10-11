@@ -254,6 +254,25 @@ button {
   .botao::placeholder {
     font-size: 1.4rem;
   }
+
+  .output-area {
+    padding: 1.2rem;
+    gap: 3rem;
+
+    .output-values section {
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 376px) {
@@ -268,21 +287,5 @@ button {
 
   .input-area div .botaos button {
     font-size: 1.4rem;
-  }
-
-  .output-area {
-    padding: 1.2rem;
-
-    h3 {
-      font-size: 1.2rem;
-    }
-
-    p {
-      font-size: 0.9rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-    }
   }
 }
