@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Space Mono", sans-serif;
-  font-weight: 700;
 }
 
 :root {
@@ -29,21 +28,22 @@ body {
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  padding: 3rem;
+  padding: 2.5rem;
   background-color: var(--light-grayish-cyan);
 }
 
 header h1 {
+  width: 8.9rem;
   font-size: 2rem;
   text-transform: uppercase;
+  color: var(--dark-grayish-cyan);
   letter-spacing: 1rem;
   word-break: break-all;
-  width: 5em;
-  color: var(--dark-grayish-cyan);
 }
 
 main {
-  width: 60vw;
+  max-width: 1000px;
+  width: 78vw;
   background-color: var(--white);
   display: flex;
   gap: 3rem;
@@ -62,13 +62,31 @@ main {
 .input-area div {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   gap: 0.6rem;
+}
+.input-area div input {
+  background-color: var(--very-light-grayish-cyan);
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 0.7rem;
+  text-align: right;
+  font-size: 1.5em;
+  color: var(--very-dark-cyan);
+  width: 100%;
+}
+.input-area div input::-moz-placeholder {
+  color: var(--grayish-cyan);
+}
+.input-area div input::placeholder {
+  color: var(--grayish-cyan);
+}
+.input-area div input.selecionado, .input-area div input:focus {
+  outline: 2px var(--strong-cyan) solid;
 }
 .input-area div .botaos {
   display: grid;
-  grid-template-columns: 31% 31% 31%;
-  grid-template-rows: 3rem 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 3rem);
   gap: 1rem;
 }
 .input-area div .botaos button {
@@ -78,22 +96,14 @@ main {
   border: none;
   outline: none;
   border-radius: 0.3rem;
-}
-.input-area div .botaos input {
-  text-align: center;
-  font-size: 1.5rem;
+  transition: background-color 0.2s ease;
 }
 .input-area div .botaos button.selecionado {
   background-color: var(--strong-cyan);
 }
-.input-area input {
-  background-color: var(--very-light-grayish-cyan);
-  border: none;
-  border-radius: 5px;
-  padding: 0.4rem 0.7rem;
-  text-align: right;
-  font-size: 1.5em;
-  color: var(--very-dark-cyan);
+.input-area div .botaos input {
+  text-align: center;
+  font-size: 1.5rem;
 }
 .input-area #bill {
   background-image: url("./assets/icon-dollar.svg");
@@ -105,50 +115,42 @@ main {
   background-repeat: no-repeat;
   background-position: 0.8rem center;
 }
-
-label {
+.input-area label {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
-
-span {
+.input-area span {
   display: none;
   color: rgba(255, 0, 0, 0.8);
 }
 
-input::-moz-placeholder {
-  color: var(--grayish-cyan);
-}
-
-input::placeholder {
-  color: var(--grayish-cyan);
-}
-
-input.selecionado,
-input:focus {
-  outline: 2px var(--strong-cyan) solid;
-}
-
 .output-area {
   background-color: var(--very-dark-cyan);
-  width: 60%;
+  width: 50%;
   border-radius: 20px;
   padding: 2rem 1.8rem;
-  display: grid;
-  grid-template-rows: 2fr 4fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.output-area > div {
+.output-area .output-values {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.output-area .output-values section {
   display: flex;
   justify-content: space-between;
 }
-.output-area h3 {
+.output-area .output-values section h3 {
   color: var(--light-grayish-cyan);
   font-size: 1.3rem;
 }
-.output-area p {
+.output-area .output-values section p {
   color: var(--grayish-cyan);
 }
-.output-area h2 {
+.output-area .output-values section h2 {
   color: var(--strong-cyan);
   font-size: 2rem;
 }
@@ -158,15 +160,81 @@ input:focus {
   outline: none;
   border-radius: 0.2rem;
   color: var(--very-dark-cyan);
-  padding: 0.5rem 1rem;
+  height: 3rem;
+  width: 100%;
   font-size: 1.3rem;
   text-transform: uppercase;
 }
 .output-area button:hover {
   background-color: var(--strong-cyan);
-  transition: 15ms;
 }
 
 button {
   cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  body {
+    padding: 1rem;
+  }
+  main {
+    flex-direction: column;
+    width: 95vw;
+    gap: 1.5rem;
+  }
+  .input-area,
+  .output-area {
+    width: 100%;
+  }
+  .output-area {
+    padding: 1.8rem 1.6rem;
+    gap: 4rem;
+  }
+  .output-area .output-values {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media (max-width: 426px) {
+  body {
+    padding: 3rem 0 0;
+  }
+  main {
+    width: 100vw;
+    border-radius: 1.8rem 1.8rem 0 0;
+  }
+  .input-area div .botaos {
+    gap: 0.5rem;
+  }
+  .botao::-moz-placeholder {
+    font-size: 1.4rem;
+  }
+  .botao::placeholder {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 376px) {
+  main {
+    padding: 2rem 1.5rem;
+    gap: 2.5rem;
+  }
+  .input-area div .botaos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .input-area div .botaos button {
+    font-size: 1.4rem;
+  }
+  .output-area {
+    padding: 1.2rem;
+  }
+  .output-area h3 {
+    font-size: 1.2rem;
+  }
+  .output-area p {
+    font-size: 0.9rem;
+  }
+  .output-area h2 {
+    font-size: 1.8rem;
+  }
 }/*# sourceMappingURL=style.css.map */
