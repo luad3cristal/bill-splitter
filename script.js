@@ -25,24 +25,19 @@ qtdPessoas.addEventListener("input", () => {
 // Calcula o resultado final e coloca no HTML
 function result() {
   // Testa se existe uma tag com a classe seleiconado, e tenta pegar o value da porcentagem, o conteúdo da tag ou o valor do input.
-  let porcentagem = document.querySelector(".selecionado");
-  porcentagem =
-    porcentagem?.value ||
-    porcentagem?.textContent.slice(0, -1) ||
-    customPercentage.value;
+  const porcentagem =
+    +document.querySelector(".selecionado")?.textContent.slice(0, -1) ||
+    +customPercentage.value;
 
   // Se a qtdPessoas > 0, faz o display do valor a ser pago
   if (qtdPessoas.value > 0) {
-    tip.textContent = `$ ${(
-      (+porcentagem * +bill.value) /
-      +qtdPessoas.value /
-      100
-    ).toFixed(2)}`;
+    const tipCalc = (+bill.value * porcentagem) / 100;
+    const tipPerPerson = (tipCalc / qtdPessoas.value).toFixed(2);
 
-    total.textContent = `$ ${(
-      (+tip.textContent.slice(1) + +bill.value) /
-      +qtdPessoas.value
-    ).toFixed(2)}`;
+    const totalCalc = ((+bill.value + +tipCalc) / qtdPessoas.value).toFixed(2);
+
+    tip.textContent = `$ ${tipPerPerson}`;
+    total.textContent = `$ ${totalCalc}`;
   } else {
     // Se não, mantém zerado
     tip.textContent = "$ 0.00";
